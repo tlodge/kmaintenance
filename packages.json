@@ -1,5 +1,5 @@
 {
-    "packageId": "1e42c0f56dad68",
+    "packageId": "ce976584dd90c8",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -666,6 +666,232 @@
                     "webhookId": "98495802930948"
                 }
             ]
+        },
+        {
+            "buttonId": "1f2da359e0a725",
+            "name": "ongoing issues",
+            "description": "button description",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "ongoing issues",
+                    "type": "datastoreitem",
+                    "values": {
+                        "storeId": "issueongoing",
+                        "schema": [
+                            {
+                                "id": "1bac8667ca3602",
+                                "path": "196b6affebe2d8,1bac8667ca3602",
+                                "alias": "communal/apartment",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "196b6affebe2d8,284bd5bf65328c",
+                                "alias": "user",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "196b6affebe2d8,15513e1797ce37",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "265f3bf0677dd6",
+                                "path": "265f3bf0677dd6",
+                                "alias": "status",
+                                "default": ""
+                            }
+                        ],
+                        "dschema": [
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "196b6affebe2d8,284bd5bf65328c",
+                                "alias": "reporter",
+                                "default": ""
+                            },
+                            {
+                                "id": "1bac8667ca3602",
+                                "path": "196b6affebe2d8,1bac8667ca3602",
+                                "alias": "issue location",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "196b6affebe2d8,15513e1797ce37",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "2fd52185e761ce",
+                                "path": "196b6affebe2d8,2fd52185e761ce",
+                                "alias": "location",
+                                "default": ""
+                            },
+                            {
+                                "id": "264c6dd26636e6",
+                                "path": "196b6affebe2d8,264c6dd26636e6",
+                                "alias": "reported issue",
+                                "default": ""
+                            },
+                            {
+                                "id": "34d30914c0f6d6",
+                                "path": "196b6affebe2d8,34d30914c0f6d6",
+                                "alias": "access permit",
+                                "default": ""
+                            },
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
+                                "alias": "ticket",
+                                "default": ""
+                            },
+                            {
+                                "id": "265f3bf0677dd6",
+                                "path": "265f3bf0677dd6",
+                                "alias": "status",
+                                "default": ""
+                            },
+                            {
+                                "id": "2e744a3d9c2fe8",
+                                "path": "2e744a3d9c2fe8",
+                                "alias": "details",
+                                "default": ""
+                            }
+                        ],
+                        "filters": [],
+                        "limit": -1,
+                        "orderby": "pressed",
+                        "sortby": "asc"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1a86fab3098764",
+                    "number": 1
+                }
+            ],
+            "navigation": {
+                "id": "1a86fab3098764",
+                "type": "node",
+                "parent": null,
+                "children": [],
+                "defaults": {}
+            },
+            "webhooks": []
+        },
+        {
+            "buttonId": "2965107462088c",
+            "name": "button name",
+            "description": "button description",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "completed issues",
+                    "type": "datastoreitem",
+                    "values": {
+                        "storeId": "issuecomplete",
+                        "schema": [
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
+                                "alias": "ticket",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "196b6affebe2d8,284bd5bf65328c",
+                                "alias": "user",
+                                "default": ""
+                            },
+                            {
+                                "id": "265f3bf0677dd6",
+                                "path": "265f3bf0677dd6",
+                                "alias": "status",
+                                "default": ""
+                            }
+                        ],
+                        "dschema": [
+                            {
+                                "id": "1bac8667ca3602",
+                                "path": "196b6affebe2d8,1bac8667ca3602",
+                                "alias": "room/communal",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "196b6affebe2d8,284bd5bf65328c",
+                                "alias": "reporter",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "196b6affebe2d8,15513e1797ce37",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "2fd52185e761ce",
+                                "path": "196b6affebe2d8,2fd52185e761ce",
+                                "alias": "location",
+                                "default": ""
+                            },
+                            {
+                                "id": "264c6dd26636e6",
+                                "path": "196b6affebe2d8,264c6dd26636e6",
+                                "alias": "issue report",
+                                "default": ""
+                            },
+                            {
+                                "id": "34d30914c0f6d6",
+                                "path": "196b6affebe2d8,34d30914c0f6d6",
+                                "alias": "access permitted",
+                                "default": ""
+                            },
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
+                                "alias": "ticket number",
+                                "default": ""
+                            },
+                            {
+                                "id": "3015fc1cfc029",
+                                "path": "196b6affebe2d8,3015fc1cfc029",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "265f3bf0677dd6",
+                                "path": "265f3bf0677dd6",
+                                "alias": "status",
+                                "default": ""
+                            },
+                            {
+                                "id": "2e744a3d9c2fe8",
+                                "path": "2e744a3d9c2fe8",
+                                "alias": "details of resolution",
+                                "default": ""
+                            }
+                        ],
+                        "filters": [],
+                        "limit": -1,
+                        "orderby": "pressed",
+                        "sortby": "asc"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "78114b0bb5bb4c",
+                    "number": 1
+                }
+            ],
+            "navigation": {
+                "id": "78114b0bb5bb4c",
+                "type": "node",
+                "parent": null,
+                "children": [],
+                "defaults": {}
+            },
+            "webhooks": []
         }
     ]
 }
