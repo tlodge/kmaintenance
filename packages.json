@@ -1,0 +1,576 @@
+{
+    "packageId": "295c05fac34dae",
+    "name": "maintanance",
+    "description": "kaplan maintenance button",
+    "buttons": [
+        {
+            "buttonId": "b249939cd91f4",
+            "name": "report issue",
+            "description": "report an issue",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "where is the issue?",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "my apartment",
+                            "communal area"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Please let us know whether the issue is in your apartment or in a communal area"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1bac8667ca3602",
+                    "number": 1
+                },
+                {
+                    "question": "please provide your room number",
+                    "type": "user",
+                    "values": {},
+                    "validators": [],
+                    "compulsory": false,
+                    "questionId": "284bd5bf65328c",
+                    "number": 2
+                },
+                {
+                    "question": "what kind of issue is it?",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "plumbing",
+                            "electrical",
+                            "doors",
+                            "windows",
+                            "cooker",
+                            "microwave",
+                            "fridge",
+                            "other"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Please let us know what kind of issue it is."
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "15513e1797ce37",
+                    "number": 3
+                },
+                {
+                    "question": "where is it?",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "bedroom",
+                            "bathroom",
+                            "kitchen",
+                            "corridor"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "If possible, please help us pinpoint where the problem is"
+                    },
+                    "validators": [],
+                    "compulsory": false,
+                    "questionId": "2fd52185e761ce",
+                    "number": 4
+                },
+                {
+                    "question": "please provide further details",
+                    "type": "freetext",
+                    "values": {
+                        "format": "medium",
+                        "description": "Please give as any more information about the problem that may be relevant."
+                    },
+                    "validators": [],
+                    "compulsory": false,
+                    "questionId": "264c6dd26636e6",
+                    "number": 5
+                },
+                {
+                    "question": "access request",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Are you ok for us to access your apartment when you are not there in order to deal with the issue?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "34d30914c0f6d6",
+                    "number": 6
+                },
+                {
+                    "question": "your ticket number",
+                    "type": "serverfunction",
+                    "values": {
+                        "url": "/api/v1/unique",
+                        "method": "GET",
+                        "responseType": "",
+                        "description": "this is your ticket number for your issue"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2f90e3f4cfa52c",
+                    "number": 7
+                }
+            ],
+            "navigation": {
+                "id": "284bd5bf65328c",
+                "type": "node",
+                "parent": "1bac8667ca3602",
+                "children": [
+                    {
+                        "id": "1bac8667ca3602",
+                        "type": "node",
+                        "parent": "284bd5bf65328c",
+                        "children": [
+                            {
+                                "id": "15513e1797ce37",
+                                "type": "node",
+                                "parent": "1bac8667ca3602",
+                                "children": [
+                                    {
+                                        "id": "2fd52185e761ce",
+                                        "type": "node",
+                                        "parent": "15513e1797ce37",
+                                        "children": [
+                                            {
+                                                "id": "264c6dd26636e6",
+                                                "type": "node",
+                                                "parent": "2fd52185e761ce",
+                                                "children": [
+                                                    {
+                                                        "id": "34d30914c0f6d6",
+                                                        "type": "node",
+                                                        "parent": "264c6dd26636e6",
+                                                        "children": [
+                                                            {
+                                                                "id": "2f90e3f4cfa52c",
+                                                                "type": "node",
+                                                                "parent": "34d30914c0f6d6",
+                                                                "children": [
+                                                                    {
+                                                                        "id": "103b09d9aba62c",
+                                                                        "type": "node",
+                                                                        "parent": "2f90e3f4cfa52c",
+                                                                        "children": [
+                                                                            {
+                                                                                "id": "20c44f60837ec8",
+                                                                                "type": "node",
+                                                                                "parent": "103b09d9aba62c",
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "rules": []
+                    }
+                ],
+                "defaults": {}
+            },
+            "webhooks": [
+                {
+                    "name": "log endpoint",
+                    "type": "log",
+                    "url": "https://[buttonkit]/api/v1/datastore/log",
+                    "method": "POST",
+                    "contentType": "json",
+                    "parameters": {
+                        "dynamic": {
+                            "presser": [
+                                {
+                                    "id": "103b09d9aba62c_presser",
+                                    "type": "presser"
+                                }
+                            ],
+                            "pressed": [
+                                {
+                                    "id": "103b09d9aba62c_pressed",
+                                    "type": "pressed"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "_datastorename": "issuerequest"
+                        }
+                    },
+                    "webhookId": "103b09d9aba62c"
+                },
+                {
+                    "name": "notify endpoint",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "284bd5bf65328c",
+                                    "type": "question",
+                                    "answer": {}
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "id": "2f90e3f4cfa52c",
+                                    "qid": "2f90e3f4cfa52c",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Issue report",
+                                "body": "Thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "20c44f60837ec8"
+                }
+            ]
+        },
+        {
+            "buttonId": "28d46884d6fc38",
+            "name": "current issues",
+            "description": "this is a list of all issue requests",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "issues",
+                    "type": "datastoreitem",
+                    "values": {
+                        "storeId": "issuerequest",
+                        "schema": [
+                            {
+                                "id": "103b09d9aba62c_pressed",
+                                "path": "103b09d9aba62c_pressed",
+                                "alias": "reported",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "284bd5bf65328c",
+                                "alias": "user",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "15513e1797ce37",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "34d30914c0f6d6",
+                                "path": "34d30914c0f6d6",
+                                "alias": "access",
+                                "default": ""
+                            }
+                        ],
+                        "dschema": [
+                            {
+                                "id": "103b09d9aba62c_pressed",
+                                "path": "103b09d9aba62c_pressed",
+                                "alias": "reported",
+                                "default": ""
+                            },
+                            {
+                                "id": "1bac8667ca3602",
+                                "path": "1bac8667ca3602",
+                                "alias": "apartment/communal",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "284bd5bf65328c",
+                                "alias": "user",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "15513e1797ce37",
+                                "alias": "issue type",
+                                "default": ""
+                            },
+                            {
+                                "id": "2fd52185e761ce",
+                                "path": "2fd52185e761ce",
+                                "alias": "location",
+                                "default": ""
+                            },
+                            {
+                                "id": "264c6dd26636e6",
+                                "path": "264c6dd26636e6",
+                                "alias": "details",
+                                "default": ""
+                            },
+                            {
+                                "id": "34d30914c0f6d6",
+                                "path": "34d30914c0f6d6",
+                                "alias": "access permitted",
+                                "default": ""
+                            },
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "2f90e3f4cfa52c",
+                                "alias": "issue number",
+                                "default": ""
+                            }
+                        ],
+                        "filters": [],
+                        "limit": -1,
+                        "orderby": "pressed",
+                        "sortby": "asc"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "196b6affebe2d8",
+                    "number": 1
+                },
+                {
+                    "question": "status",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "complete",
+                            "ongoing"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "please update the status of this issue"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "265f3bf0677dd6",
+                    "number": 2
+                },
+                {
+                    "question": "please provide further details",
+                    "type": "freetext",
+                    "values": {
+                        "format": "medium",
+                        "description": "the details of your response will be sent back to the initial reporter"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2e744a3d9c2fe8",
+                    "number": 3
+                }
+            ],
+            "navigation": {
+                "id": "196b6affebe2d8",
+                "type": "node",
+                "parent": null,
+                "children": [
+                    {
+                        "id": "265f3bf0677dd6",
+                        "type": "node",
+                        "parent": "196b6affebe2d8",
+                        "children": [
+                            {
+                                "id": "2e744a3d9c2fe8",
+                                "type": "node",
+                                "parent": "265f3bf0677dd6",
+                                "children": [
+                                    {
+                                        "id": "48f7dd78a0c238",
+                                        "type": "node",
+                                        "parent": "2e744a3d9c2fe8",
+                                        "children": [
+                                            {
+                                                "id": "98495802930948",
+                                                "type": "node",
+                                                "parent": "48f7dd78a0c238",
+                                                "children": []
+                                            }
+                                        ],
+                                        "rules": [
+                                            {
+                                                "type": "question",
+                                                "id": "265f3bf0677dd6",
+                                                "value": {
+                                                    "type": "options",
+                                                    "values": [
+                                                        "complete"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "e07aa08ba129e",
+                                        "type": "node",
+                                        "parent": "2e744a3d9c2fe8",
+                                        "children": [
+                                            {
+                                                "id": "f6249eb9cb7658",
+                                                "type": "node",
+                                                "parent": "e07aa08ba129e",
+                                                "children": []
+                                            }
+                                        ],
+                                        "rules": [
+                                            {
+                                                "type": "question",
+                                                "id": "265f3bf0677dd6",
+                                                "value": {
+                                                    "type": "options",
+                                                    "values": [
+                                                        "ongoing"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "defaults": {}
+            },
+            "webhooks": [
+                {
+                    "name": "log endpoint",
+                    "type": "log",
+                    "url": "https://[buttonkit]/api/v1/datastore/log",
+                    "method": "POST",
+                    "contentType": "json",
+                    "parameters": {
+                        "dynamic": {
+                            "presser": [
+                                {
+                                    "id": "48f7dd78a0c238_presser",
+                                    "type": "presser"
+                                }
+                            ],
+                            "pressed": [
+                                {
+                                    "id": "48f7dd78a0c238_pressed",
+                                    "type": "pressed"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "_datastorename": "issuecomplete"
+                        }
+                    },
+                    "webhookId": "48f7dd78a0c238"
+                },
+                {
+                    "name": "log endpoint",
+                    "type": "log",
+                    "url": "https://[buttonkit]/api/v1/datastore/log",
+                    "method": "POST",
+                    "contentType": "json",
+                    "parameters": {
+                        "dynamic": {
+                            "presser": [
+                                {
+                                    "id": "e07aa08ba129e_presser",
+                                    "type": "presser"
+                                }
+                            ],
+                            "pressed": [
+                                {
+                                    "id": "e07aa08ba129e_pressed",
+                                    "type": "pressed"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "_datastorename": "issueongoing"
+                        }
+                    },
+                    "webhookId": "e07aa08ba129e"
+                },
+                {
+                    "name": "notify endpoint",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [],
+                            "placeholders": []
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "f6249eb9cb7658"
+                },
+                {
+                    "name": "notify endpoint",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [],
+                            "placeholders": [
+                                {
+                                    "id": "196b6affebe2d8",
+                                    "qid": "196b6affebe2d8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "98495802930948"
+                }
+            ]
+        }
+    ]
+}
