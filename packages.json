@@ -599,7 +599,7 @@
                             ],
                             "placeholders": [
                                 {
-                                    "type": "datastoreitem",
+                                    "type": "question",
                                     "id": "196b6affebe2d8:2f90e3f4cfa52c",
                                     "qid": "196b6affebe2d8",
                                     "key": "2f90e3f4cfa52c"
@@ -647,7 +647,7 @@
                             ],
                             "placeholders": [
                                 {
-                                    "type": "datastoreitem",
+                                    "type": "question",
                                     "id": "196b6affebe2d8:2f90e3f4cfa52c",
                                     "qid": "196b6affebe2d8",
                                     "key": "2f90e3f4cfa52c"
