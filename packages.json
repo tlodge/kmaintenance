@@ -1,5 +1,5 @@
 {
-    "packageId": "22233c312bde1a",
+    "packageId": "1788b26437dd7a",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -289,12 +289,25 @@
                                     "answer": {}
                                 }
                             ],
-                            "placeholders": []
+                            "placeholders": [
+                                {
+                                    "id": "284bd5bf65328c:firstname",
+                                    "qid": "284bd5bf65328c",
+                                    "key": "firstname",
+                                    "type": "question"
+                                },
+                                {
+                                    "id": "2f90e3f4cfa52c",
+                                    "qid": "2f90e3f4cfa52c",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue report",
-                                "body": "Thank you for reporting your issue.  It has been given the issue number: .  We will keep you updated on progress."
+                                "body": "Dear [284bd5bf65328c:firstname], thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
                             },
                             "sms": {
                                 "body": ""
@@ -585,13 +598,24 @@
                                 }
                             ],
                             "placeholders": [
-                               
+                                {
+                                    "type": "datastoreitem",
+                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
+                                    "qid": "196b6affebe2d8",
+                                    "key": "2f90e3f4cfa52c"
+                                },
+                                {
+                                    "id": "2e744a3d9c2fe8",
+                                    "qid": "2e744a3d9c2fe8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue update",
-                                "body": "Please note that your issue:  has been marked as 'ongoing'.  The current report: "
+                                "body": "Please note that your issue: [196b6affebe2d8:2f90e3f4cfa52c] has been marked as 'ongoing'.  The current report: [2e744a3d9c2fe8]"
                             },
                             "sms": {
                                 "body": ""
@@ -622,13 +646,18 @@
                                 }
                             ],
                             "placeholders": [
-                                
+                                {
+                                    "type": "datastoreitem",
+                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
+                                    "qid": "196b6affebe2d8",
+                                    "key": "2f90e3f4cfa52c"
+                                }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue marked as complete",
-                                "body": "Please be informed that your reported issue has now been marked as complete.  Report is: "
+                                "body": "Please be informed that your reported issue has now been marked as complete.  Ticket is: [196b6affebe2d8:2f90e3f4cfa52c].  "
                             },
                             "sms": {
                                 "body": ""
