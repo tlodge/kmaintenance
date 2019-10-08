@@ -1,5 +1,5 @@
 {
-    "packageId": "12e8fe62c44dce",
+    "packageId": "22233c312bde1a",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -597,13 +597,18 @@
                                     "qid": "2e744a3d9c2fe8",
                                     "key": "value",
                                     "type": "question"
+                                },
+                                {
+                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
+                                    "key": "2f90e3f4cfa52c",
+                                    "value": "2f90e3f4cfa52c"
                                 }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue update",
-                                "body": "Please note that your issue is status has been marked as ongoing.  Current report: [2e744a3d9c2fe8]"
+                                "body": "Please note that your issue: [196b6affebe2d8:2f90e3f4cfa52c] has been marked as 'ongoing'.  The current report: [2e744a3d9c2fe]"
                             },
                             "sms": {
                                 "body": ""
