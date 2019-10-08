@@ -1,5 +1,5 @@
 {
-    "packageId": "295c05fac34dae",
+    "packageId": "1ccb630402fadb",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -119,6 +119,24 @@
                     "compulsory": true,
                     "questionId": "2f90e3f4cfa52c",
                     "number": 7
+                },
+                {
+                    "question": "what kind of issue is it?",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "cleaning",
+                            "obstruction",
+                            "damage"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": ""
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "3015fc1cfc029",
+                    "number": 8
                 }
             ],
             "navigation": {
@@ -142,19 +160,19 @@
                                         "parent": "15513e1797ce37",
                                         "children": [
                                             {
-                                                "id": "264c6dd26636e6",
+                                                "id": "34d30914c0f6d6",
                                                 "type": "node",
                                                 "parent": "2fd52185e761ce",
                                                 "children": [
                                                     {
-                                                        "id": "34d30914c0f6d6",
+                                                        "id": "264c6dd26636e6",
                                                         "type": "node",
-                                                        "parent": "264c6dd26636e6",
+                                                        "parent": "34d30914c0f6d6",
                                                         "children": [
                                                             {
                                                                 "id": "2f90e3f4cfa52c",
                                                                 "type": "node",
-                                                                "parent": "34d30914c0f6d6",
+                                                                "parent": "264c6dd26636e6",
                                                                 "children": [
                                                                     {
                                                                         "id": "103b09d9aba62c",
@@ -173,9 +191,24 @@
                                                             }
                                                         ]
                                                     }
-                                                ]
+                                                ],
+                                                "rules": []
                                             }
                                         ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3015fc1cfc029",
+                                "type": "node",
+                                "parent": "1bac8667ca3602",
+                                "children": [
+                                    {
+                                        "id": "2d123e39ef158c",
+                                        "type": "subtree",
+                                        "parent": null,
+                                        "nodeid": "264c6dd26636e6",
+                                        "children": []
                                     }
                                 ]
                             }
