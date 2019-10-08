@@ -289,19 +289,12 @@
                                     "answer": {}
                                 }
                             ],
-                            "placeholders": [
-                                {
-                                    "id": "2f90e3f4cfa52c",
-                                    "qid": "2f90e3f4cfa52c",
-                                    "key": "value",
-                                    "type": "question"
-                                }
-                            ]
+                            "placeholders": []
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue report",
-                                "body": "Thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
+                                "body": "Thank you for reporting your issue.  It has been given the issue number: .  We will keep you updated on progress."
                             },
                             "sms": {
                                 "body": ""
@@ -592,23 +585,13 @@
                                 }
                             ],
                             "placeholders": [
-                                {
-                                    "id": "2e744a3d9c2fe8",
-                                    "qid": "2e744a3d9c2fe8",
-                                    "key": "value",
-                                    "type": "question"
-                                },
-                                {
-                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
-                                    "key": "2f90e3f4cfa52c",
-                                    "value": "2f90e3f4cfa52c"
-                                }
+                               
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue update",
-                                "body": "Please note that your issue: [196b6affebe2d8:2f90e3f4cfa52c] has been marked as 'ongoing'.  The current report: [2e744a3d9c2fe]"
+                                "body": "Please note that your issue:  has been marked as 'ongoing'.  The current report: "
                             },
                             "sms": {
                                 "body": ""
@@ -639,29 +622,13 @@
                                 }
                             ],
                             "placeholders": [
-                                {
-                                    "id": "196b6affebe2d8",
-                                    "qid": "196b6affebe2d8",
-                                    "key": "value",
-                                    "type": "question"
-                                },
-                                {
-                                    "id": "2e744a3d9c2fe8",
-                                    "qid": "2e744a3d9c2fe8",
-                                    "key": "value",
-                                    "type": "question"
-                                },
-                                {
-                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
-                                    "key": "2f90e3f4cfa52c",
-                                    "value": "2f90e3f4cfa52c"
-                                }
+                                
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue marked as complete",
-                                "body": "Please be informed that your reported issue [196b6affebe2d8:2f90e3f4cfa52c] has now been marked as complete.  Report is: [2e744a3d9c2fe8]"
+                                "body": "Please be informed that your reported issue has now been marked as complete.  Report is: "
                             },
                             "sms": {
                                 "body": ""
