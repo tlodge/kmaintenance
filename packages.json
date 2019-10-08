@@ -1,5 +1,5 @@
 {
-    "packageId": "2f88af930a6a6a",
+    "packageId": "1fbef8e036a2ed",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -782,8 +782,8 @@
         },
         {
             "buttonId": "2965107462088c",
-            "name": "button name",
-            "description": "button description",
+            "name": "completed issues",
+            "description": "completed issues",
             "type": "action",
             "questions": [
                 {
