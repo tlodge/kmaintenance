@@ -1,5 +1,5 @@
 {
-    "packageId": "9f42011f035e28",
+    "packageId": "1283ccbf065879",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -570,7 +570,7 @@
                             ]
                         },
                         "static": {
-                            "_datastorename": "issueongoing"
+                            "_datastorename": "issuestatus"
                         }
                     },
                     "webhookId": "e07aa08ba129e"
@@ -669,8 +669,8 @@
         },
         {
             "buttonId": "1f2da359e0a725",
-            "name": "ongoing issues",
-            "description": "button description",
+            "name": "status updates",
+            "description": "all ongoing status updates",
             "type": "action",
             "questions": [
                 {
