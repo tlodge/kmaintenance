@@ -1,5 +1,5 @@
 {
-    "packageId": "24f88251a8488a",
+    "packageId": "1e42c0f56dad68",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -432,7 +432,7 @@
                     "number": 2
                 },
                 {
-                    "question": "please provide further details",
+                    "question": "details of resolution",
                     "type": "freetext",
                     "values": {
                         "format": "medium",
@@ -582,13 +582,28 @@
                     "method": "POST",
                     "parameters": {
                         "dynamic": {
-                            "recipients": [],
-                            "placeholders": []
+                            "recipients": [
+                                {
+                                    "id": "196b6affebe2d8",
+                                    "type": "question",
+                                    "answer": {
+                                        "path": "284bd5bf65328c"
+                                    }
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "id": "2e744a3d9c2fe8",
+                                    "qid": "2e744a3d9c2fe8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "Issue update",
+                                "body": "Please note that your issue is status has been marked as ongoing.  Current report: [2e744a3d9c2fe8]"
                             },
                             "sms": {
                                 "body": ""
@@ -609,11 +624,25 @@
                     "method": "POST",
                     "parameters": {
                         "dynamic": {
-                            "recipients": [],
+                            "recipients": [
+                                {
+                                    "id": "196b6affebe2d8",
+                                    "type": "question",
+                                    "answer": {
+                                        "path": "284bd5bf65328c"
+                                    }
+                                }
+                            ],
                             "placeholders": [
                                 {
                                     "id": "196b6affebe2d8",
                                     "qid": "196b6affebe2d8",
+                                    "key": "value",
+                                    "type": "question"
+                                },
+                                {
+                                    "id": "2e744a3d9c2fe8",
+                                    "qid": "2e744a3d9c2fe8",
                                     "key": "value",
                                     "type": "question"
                                 }
@@ -621,8 +650,8 @@
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "Issue marked as complete",
+                                "body": "Please be informed that your reported issue has now been marked as complete.  Report is: [2e744a3d9c2fe8]"
                             },
                             "sms": {
                                 "body": ""
