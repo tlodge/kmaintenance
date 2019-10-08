@@ -1,5 +1,5 @@
 {
-    "packageId": "1fbef8e036a2ed",
+    "packageId": "1b4d8a8a474de8",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -112,7 +112,7 @@
                     "values": {
                         "url": "/api/v1/unique",
                         "method": "POST",
-                        "responseType": "",
+                        "responseType": "html",
                         "description": "this is your ticket number for your issue"
                     },
                     "validators": [],
