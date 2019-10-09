@@ -1,5 +1,5 @@
 {
-    "packageId": "2b174b9ec14944",
+    "packageId": "121858915fb211",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -300,13 +300,19 @@
                                     "qid": "2f90e3f4cfa52c",
                                     "key": "value",
                                     "type": "question"
+                                },
+                                {
+                                    "id": "4e81ae4e9c8378",
+                                    "qid": "4e81ae4e9c8378",
+                                    "key": "value",
+                                    "type": "question"
                                 }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue report",
-                                "body": "Dear [284bd5bf65328c:firstname], thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
+                                "body": "Dear [4e81ae4e9c8378], thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
                             },
                             "sms": {
                                 "body": ""
