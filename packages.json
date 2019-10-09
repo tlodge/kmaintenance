@@ -1,5 +1,5 @@
 {
-    "packageId": "1788b26437dd7a",
+    "packageId": "1ebee852550e63",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -27,15 +27,6 @@
                     "number": 1
                 },
                 {
-                    "question": "please provide your room number",
-                    "type": "user",
-                    "values": {},
-                    "validators": [],
-                    "compulsory": false,
-                    "questionId": "284bd5bf65328c",
-                    "number": 2
-                },
-                {
                     "question": "what kind of issue is it?",
                     "type": "options",
                     "values": {
@@ -56,7 +47,7 @@
                     "validators": [],
                     "compulsory": true,
                     "questionId": "15513e1797ce37",
-                    "number": 3
+                    "number": 2
                 },
                 {
                     "question": "where is it?",
@@ -75,7 +66,7 @@
                     "validators": [],
                     "compulsory": false,
                     "questionId": "2fd52185e761ce",
-                    "number": 4
+                    "number": 3
                 },
                 {
                     "question": "please provide further details",
@@ -87,7 +78,7 @@
                     "validators": [],
                     "compulsory": false,
                     "questionId": "264c6dd26636e6",
-                    "number": 5
+                    "number": 4
                 },
                 {
                     "question": "access request",
@@ -104,7 +95,7 @@
                     "validators": [],
                     "compulsory": true,
                     "questionId": "34d30914c0f6d6",
-                    "number": 6
+                    "number": 5
                 },
                 {
                     "question": "your ticket number",
@@ -118,7 +109,7 @@
                     "validators": [],
                     "compulsory": true,
                     "questionId": "2f90e3f4cfa52c",
-                    "number": 7
+                    "number": 6
                 },
                 {
                     "question": "what kind of issue is it?",
@@ -136,18 +127,27 @@
                     "validators": [],
                     "compulsory": true,
                     "questionId": "3015fc1cfc029",
+                    "number": 7
+                },
+                {
+                    "question": "please provide your room number",
+                    "type": "rooms",
+                    "values": {},
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "4e81ae4e9c8378",
                     "number": 8
                 }
             ],
             "navigation": {
-                "id": "284bd5bf65328c",
+                "id": "4e81ae4e9c8378",
                 "type": "node",
-                "parent": "1bac8667ca3602",
+                "parent": "284bd5bf65328c",
                 "children": [
                     {
                         "id": "1bac8667ca3602",
                         "type": "node",
-                        "parent": "284bd5bf65328c",
+                        "parent": "4e81ae4e9c8378",
                         "children": [
                             {
                                 "id": "15513e1797ce37",
@@ -241,8 +241,7 @@
                                     }
                                 ]
                             }
-                        ],
-                        "rules": []
+                        ]
                     }
                 ],
                 "defaults": {}
@@ -284,7 +283,7 @@
                         "dynamic": {
                             "recipients": [
                                 {
-                                    "id": "284bd5bf65328c",
+                                    "id": "4e81ae4e9c8378",
                                     "type": "question",
                                     "answer": {}
                                 }
