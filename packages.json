@@ -616,7 +616,7 @@
                         "dynamic": {
                             "recipients": [
                                 {
-                                    "id": "196b6affebe2d8",
+                                    "qid": "196b6affebe2d8",
                                     "type": "question",
                                     "answer": {
                                         "path": "4e81ae4e9c8378"
