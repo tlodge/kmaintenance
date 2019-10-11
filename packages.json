@@ -1,5 +1,5 @@
 {
-    "packageId": "121858915fb211",
+    "packageId": "2435bc81003aee",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -104,7 +104,7 @@
                         "url": "/api/v1/unique",
                         "method": "POST",
                         "responseType": "text",
-                        "description": "this is your ticket number for your issue"
+                        "description": "this is your ticket number for your issue, we will email it to you for reference"
                     },
                     "validators": [],
                     "compulsory": true,
@@ -241,7 +241,8 @@
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "rules": []
                     }
                 ],
                 "defaults": {}
@@ -306,13 +307,19 @@
                                     "qid": "4e81ae4e9c8378",
                                     "key": "value",
                                     "type": "question"
+                                },
+                                {
+                                    "id": "264c6dd26636e6",
+                                    "qid": "264c6dd26636e6",
+                                    "key": "value",
+                                    "type": "question"
                                 }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue report",
-                                "body": "Dear [4e81ae4e9c8378], thank you for reporting your issue.  It has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
+                                "body": "Dear [4e81ae4e9c8378], thank you for reporting your issue:\n\n[264c6dd26636e6]\n\nIt has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
                             },
                             "sms": {
                                 "body": ""
@@ -341,27 +348,39 @@
                         "storeId": "issuerequest",
                         "schema": [
                             {
+                                "id": "4e81ae4e9c8378",
+                                "path": "4e81ae4e9c8378",
+                                "alias": "room number",
+                                "default": ""
+                            },
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "2f90e3f4cfa52c",
+                                "alias": "issue no",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "15513e1797ce37",
+                                "alias": "type",
+                                "default": ""
+                            },
+                            {
                                 "id": "103b09d9aba62c_pressed",
                                 "path": "103b09d9aba62c_pressed",
                                 "alias": "reported",
                                 "default": ""
                             },
                             {
-                                "id": "284bd5bf65328c",
-                                "path": "284bd5bf65328c",
-                                "alias": "user",
-                                "default": ""
-                            },
-                            {
-                                "id": "15513e1797ce37",
-                                "path": "15513e1797ce37",
-                                "alias": "issue type",
-                                "default": ""
-                            },
-                            {
                                 "id": "34d30914c0f6d6",
                                 "path": "34d30914c0f6d6",
                                 "alias": "access",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "284bd5bf65328c",
+                                "alias": "user",
                                 "default": ""
                             }
                         ],
@@ -379,9 +398,9 @@
                                 "default": ""
                             },
                             {
-                                "id": "284bd5bf65328c",
-                                "path": "284bd5bf65328c",
-                                "alias": "user",
+                                "id": "4e81ae4e9c8378",
+                                "path": "4e81ae4e9c8378",
+                                "alias": " room number",
                                 "default": ""
                             },
                             {
@@ -412,6 +431,12 @@
                                 "id": "2f90e3f4cfa52c",
                                 "path": "2f90e3f4cfa52c",
                                 "alias": "issue number",
+                                "default": ""
+                            },
+                            {
+                                "id": "284bd5bf65328c",
+                                "path": "284bd5bf65328c",
+                                "alias": "user",
                                 "default": ""
                             }
                         ],
@@ -802,26 +827,7 @@
                     "type": "datastoreitem",
                     "values": {
                         "storeId": "issuecomplete",
-                        "schema": [
-                            {
-                                "id": "2f90e3f4cfa52c",
-                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
-                                "alias": "ticket",
-                                "default": ""
-                            },
-                            {
-                                "id": "284bd5bf65328c",
-                                "path": "196b6affebe2d8,284bd5bf65328c",
-                                "alias": "user",
-                                "default": ""
-                            },
-                            {
-                                "id": "265f3bf0677dd6",
-                                "path": "265f3bf0677dd6",
-                                "alias": "status",
-                                "default": ""
-                            }
-                        ],
+                        "schema": [],
                         "dschema": [
                             {
                                 "id": "1bac8667ca3602",
