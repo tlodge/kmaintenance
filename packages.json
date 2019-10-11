@@ -665,6 +665,7 @@
                             "recipients": [
                                 {
                                     "id": "196b6affebe2d8",
+                                    "qid": "196b6affebe2d8",
                                     "type": "question",
                                     "key": "4e81ae4e9c8378",
                                     "answer": {
