@@ -1,5 +1,5 @@
 {
-    "packageId": "189220d464cacf",
+    "packageId": "1789d87e1954ed",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -492,7 +492,14 @@
                                                 "id": "98495802930948",
                                                 "type": "node",
                                                 "parent": "48f7dd78a0c238",
-                                                "children": [],
+                                                "children": [
+                                                    {
+                                                        "id": "15829b749db122",
+                                                        "type": "node",
+                                                        "parent": "98495802930948",
+                                                        "children": []
+                                                    }
+                                                ],
                                                 "rules": []
                                             }
                                         ],
@@ -688,6 +695,23 @@
                         }
                     },
                     "webhookId": "98495802930948"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "196b6affebe2d8"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "196b6affebe2d8"
+                        }
+                    },
+                    "webhookId": "15829b749db122"
                 }
             ]
         },
