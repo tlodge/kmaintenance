@@ -1,5 +1,5 @@
 {
-    "packageId": "1789d87e1954ed",
+    "packageId": "1624527ff89d38",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -497,7 +497,8 @@
                                                         "id": "15829b749db122",
                                                         "type": "node",
                                                         "parent": "98495802930948",
-                                                        "children": []
+                                                        "children": [],
+                                                        "rules": []
                                                     }
                                                 ],
                                                 "rules": []
