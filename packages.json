@@ -1,5 +1,5 @@
 {
-    "packageId": "1624527ff89d38",
+    "packageId": "35783ac42949de",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -617,7 +617,7 @@
                             "recipients": [
                                 {
                                     "qid": "196b6affebe2d8",
-                                    "id":"196b6affebe2d8",
+                                    "id": "196b6affebe2d8",
                                     "type": "question"
                                 }
                             ],
@@ -712,107 +712,6 @@
                     "webhookId": "15829b749db122"
                 }
             ]
-        },
-        {
-            "buttonId": "1f2da359e0a725",
-            "name": "status updates",
-            "description": "all ongoing status updates",
-            "type": "action",
-            "questions": [
-                {
-                    "question": "ongoing issues",
-                    "type": "datastoreitem",
-                    "values": {
-                        "storeId": "issueongoing",
-                        "schema": [
-                            {
-                                "id": "1bac8667ca3602",
-                                "path": "196b6affebe2d8,1bac8667ca3602",
-                                "alias": "communal/apartment",
-                                "default": ""
-                            },
-                            {
-                                "id": "15513e1797ce37",
-                                "path": "196b6affebe2d8,15513e1797ce37",
-                                "alias": "issue type",
-                                "default": ""
-                            },
-                            {
-                                "id": "265f3bf0677dd6",
-                                "path": "265f3bf0677dd6",
-                                "alias": "status",
-                                "default": ""
-                            }
-                        ],
-                        "dschema": [
-                            {
-                                "id": "1bac8667ca3602",
-                                "path": "196b6affebe2d8,1bac8667ca3602",
-                                "alias": "issue location",
-                                "default": ""
-                            },
-                            {
-                                "id": "15513e1797ce37",
-                                "path": "196b6affebe2d8,15513e1797ce37",
-                                "alias": "issue type",
-                                "default": ""
-                            },
-                            {
-                                "id": "2fd52185e761ce",
-                                "path": "196b6affebe2d8,2fd52185e761ce",
-                                "alias": "location",
-                                "default": ""
-                            },
-                            {
-                                "id": "264c6dd26636e6",
-                                "path": "196b6affebe2d8,264c6dd26636e6",
-                                "alias": "reported issue",
-                                "default": ""
-                            },
-                            {
-                                "id": "34d30914c0f6d6",
-                                "path": "196b6affebe2d8,34d30914c0f6d6",
-                                "alias": "access permit",
-                                "default": ""
-                            },
-                            {
-                                "id": "2f90e3f4cfa52c",
-                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
-                                "alias": "ticket",
-                                "default": ""
-                            },
-                            {
-                                "id": "265f3bf0677dd6",
-                                "path": "265f3bf0677dd6",
-                                "alias": "status",
-                                "default": ""
-                            },
-                            {
-                                "id": "2e744a3d9c2fe8",
-                                "path": "2e744a3d9c2fe8",
-                                "alias": "details",
-                                "default": ""
-                            }
-                        ],
-                        "filters": [],
-                        "limit": -1,
-                        "orderby": "pressed",
-                        "sortby": "asc"
-                    },
-                    "validators": [],
-                    "compulsory": true,
-                    "questionId": "1a86fab3098764",
-                    "number": 1
-                }
-            ],
-            "navigation": {
-                "id": "1a86fab3098764",
-                "type": "node",
-                "parent": null,
-                "children": [],
-                "defaults": {}
-            },
-            "webhooks": []
         },
         {
             "buttonId": "2965107462088c",
