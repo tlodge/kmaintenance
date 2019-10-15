@@ -1,5 +1,5 @@
 {
-    "packageId": "b39ca68fa9dee",
+    "packageId": "286e0c7585758c",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -730,7 +730,32 @@
                     "type": "datastoreitem",
                     "values": {
                         "storeId": "issuecomplete",
-                        "schema": [],
+                        "schema": [
+                            {
+                                "id": "48f7dd78a0c238_pressed",
+                                "path": "48f7dd78a0c238_pressed",
+                                "alias": "reported",
+                                "default": ""
+                            },
+                            {
+                                "id": "1bac8667ca3602",
+                                "path": "196b6affebe2d8,1bac8667ca3602",
+                                "alias": "location",
+                                "default": ""
+                            },
+                            {
+                                "id": "15513e1797ce37",
+                                "path": "196b6affebe2d8,15513e1797ce37",
+                                "alias": "issue",
+                                "default": ""
+                            },
+                            {
+                                "id": "2f90e3f4cfa52c",
+                                "path": "196b6affebe2d8,2f90e3f4cfa52c",
+                                "alias": "your ticket number",
+                                "default": ""
+                            }
+                        ],
                         "dschema": [
                             {
                                 "id": "1bac8667ca3602",
