@@ -1,5 +1,5 @@
 {
-    "packageId": "185720506def91",
+    "packageId": "1748492239e6be",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -674,13 +674,19 @@
                                     "id": "196b6affebe2d8:2f90e3f4cfa52c",
                                     "qid": "196b6affebe2d8",
                                     "key": "2f90e3f4cfa52c"
+                                },
+                                {
+                                    "id": "2e744a3d9c2fe8",
+                                    "qid": "2e744a3d9c2fe8",
+                                    "key": "value",
+                                    "type": "question"
                                 }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue marked as complete",
-                                "body": "Please be informed that your reported issue has now been marked as complete.  Ticket is: [196b6affebe2d8:2f90e3f4cfa52c].  "
+                                "body": "Please be informed that your reported issue ([196b6affebe2d8:2f90e3f4cfa52c]) has now been marked as complete.  The report is as follows:\n\n[2e744a3d9c2fe8]\n\nBest wishes,\n\nMaintenance team."
                             },
                             "sms": {
                                 "body": ""
