@@ -1,5 +1,5 @@
 {
-    "packageId": "1748492239e6be",
+    "packageId": "b39ca68fa9dee",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -615,16 +615,31 @@
                     "parameters": {
                         "dynamic": {
                             "recipients": [
-                               
+                                {
+                                    "id": "196b6affebe2d8",
+                                    "type": "question",
+                                    "key": "4e81ae4e9c8378"
+                                }
                             ],
                             "placeholders": [
-                                
+                                {
+                                    "type": "question",
+                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
+                                    "qid": "196b6affebe2d8",
+                                    "key": "2f90e3f4cfa52c"
+                                },
+                                {
+                                    "id": "2e744a3d9c2fe8",
+                                    "qid": "2e744a3d9c2fe8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue update",
-                                "body": "Please note that your issue has been marked as 'ongoing'.  The current report"
+                                "body": "Please note that your issue ([196b6affebe2d8:2f90e3f4cfa52c]) has been marked as 'ongoing'.  The feedback from maintenance is:\n\n[2e744a3d9c2fe8]\n\nAll the best,\n\nMaintenance team."
                             },
                             "sms": {
                                 "body": ""
