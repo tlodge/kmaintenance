@@ -615,31 +615,16 @@
                     "parameters": {
                         "dynamic": {
                             "recipients": [
-                                {
-                                    "qid": "196b6affebe2d8",
-                                    "id": "196b6affebe2d8",
-                                    "type": "question"
-                                }
+                               
                             ],
                             "placeholders": [
-                                {
-                                    "type": "question",
-                                    "id": "196b6affebe2d8:2f90e3f4cfa52c",
-                                    "qid": "196b6affebe2d8",
-                                    "key": "2f90e3f4cfa52c"
-                                },
-                                {
-                                    "id": "2e744a3d9c2fe8",
-                                    "qid": "2e744a3d9c2fe8",
-                                    "key": "value",
-                                    "type": "question"
-                                }
+                                
                             ]
                         },
                         "static": {
                             "email": {
                                 "subject": "Issue update",
-                                "body": "Please note that your issue: [196b6affebe2d8:2f90e3f4cfa52c] has been marked as 'ongoing'.  The current report: [2e744a3d9c2fe8]"
+                                "body": "Please note that your issue has been marked as 'ongoing'.  The current report"
                             },
                             "sms": {
                                 "body": ""
