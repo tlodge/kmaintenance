@@ -1,5 +1,5 @@
 {
-    "packageId": "286e0c7585758c",
+    "packageId": "1c1aa04b729892",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -318,7 +318,7 @@
                         },
                         "static": {
                             "email": {
-                                "subject": "Issue report",
+                                "subject": "Your issue report",
                                 "body": "Dear [4e81ae4e9c8378], thank you for reporting your issue:\n\n[264c6dd26636e6]\n\nIt has been given the issue number: [2f90e3f4cfa52c].  We will keep you updated on progress."
                             },
                             "sms": {
