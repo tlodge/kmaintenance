@@ -1,5 +1,5 @@
 {
-    "packageId": "160442bad6a4cf",
+    "packageId": "1dc2aa5abe03c",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1094,6 +1094,19 @@
                                                 "type": "node",
                                                 "parent": "28bd52a39c6854",
                                                 "children": []
+                                            },
+                                            {
+                                                "id": "1a8577d057ec2c",
+                                                "type": "node",
+                                                "parent": "28bd52a39c6854",
+                                                "children": [
+                                                    {
+                                                        "id": "1911b1fedd2fe6",
+                                                        "type": "node",
+                                                        "parent": "1a8577d057ec2c",
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -1163,7 +1176,7 @@
                     "webhookId": "155efc7bb29042"
                 },
                 {
-                    "name": "notify status update",
+                    "name": "Notify status update",
                     "type": "notify",
                     "url": "https://[buttonkit]/api/v1/send",
                     "method": "POST",
@@ -1188,6 +1201,50 @@
                         }
                     },
                     "webhookId": "9b0cdb3b87f8e"
+                },
+                {
+                    "name": "Notify status removed",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [],
+                            "placeholders": []
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "1a8577d057ec2c"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "26632b48188a88"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "26632b48188a88"
+                        }
+                    },
+                    "webhookId": "1911b1fedd2fe6"
                 }
             ]
         }
