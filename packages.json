@@ -1,5 +1,5 @@
 {
-    "packageId": "1c1aa04b729892",
+    "packageId": "2eb425dbb59f1",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -831,6 +831,145 @@
                 "defaults": {}
             },
             "webhooks": []
+        },
+        {
+            "buttonId": "13caacc08d1819",
+            "name": "blocked shower",
+            "description": "blocked shower button report",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "Which room has a blocked shower?",
+                    "type": "rooms",
+                    "values": {},
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2e9d9d0395fe2e",
+                    "number": 1
+                },
+                {
+                    "question": "We will need to access your room to unblock the shower",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Do you give us permission to access your apartment when you are not in?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2f447ea5784396",
+                    "number": 2
+                },
+                {
+                    "question": "When would you like us to come and unblock your shower?",
+                    "type": "datetime",
+                    "values": {
+                        "options": [
+                            "time",
+                            "date"
+                        ],
+                        "description": "Please give us a date and time (from tomorrow onwards) and we will be in contact to confirm.",
+                        "dateconstraint": {},
+                        "timeconstraint": {}
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "237bea4938d46",
+                    "number": 3
+                }
+            ],
+            "navigation": {
+                "id": "2e9d9d0395fe2e",
+                "type": "node",
+                "parent": null,
+                "children": [
+                    {
+                        "id": "2f447ea5784396",
+                        "type": "node",
+                        "parent": "2e9d9d0395fe2e",
+                        "children": [
+                            {
+                                "id": "237bea4938d46",
+                                "type": "node",
+                                "parent": "2f447ea5784396",
+                                "children": [
+                                    {
+                                        "id": "3008702d64d274",
+                                        "type": "subtree",
+                                        "parent": null,
+                                        "nodeid": "9158bae57e0ca",
+                                        "children": []
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "2f447ea5784396",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "no"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "9158bae57e0ca",
+                                "type": "node",
+                                "parent": "2f447ea5784396",
+                                "children": [],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "2f447ea5784396",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "yes"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "defaults": {}
+            },
+            "webhooks": [
+                {
+                    "name": "log blocked shower",
+                    "type": "log",
+                    "url": "https://[buttonkit]/api/v1/datastore/log",
+                    "method": "POST",
+                    "contentType": "json",
+                    "parameters": {
+                        "dynamic": {
+                            "presser": [
+                                {
+                                    "id": "9158bae57e0ca_presser",
+                                    "type": "presser"
+                                }
+                            ],
+                            "pressed": [
+                                {
+                                    "id": "9158bae57e0ca_pressed",
+                                    "type": "pressed"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "_datastorename": "issueblockedshower"
+                        }
+                    },
+                    "webhookId": "9158bae57e0ca"
+                }
+            ]
         }
     ]
 }
