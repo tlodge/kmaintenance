@@ -1,5 +1,5 @@
 {
-    "packageId": "2eb425dbb59f1",
+    "packageId": "26ff59ec93fe7a",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -902,7 +902,8 @@
                                         "type": "subtree",
                                         "parent": null,
                                         "nodeid": "9158bae57e0ca",
-                                        "children": []
+                                        "children": [],
+                                        "rules": []
                                     }
                                 ],
                                 "rules": [
@@ -936,7 +937,8 @@
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "rules": []
                     }
                 ],
                 "defaults": {}
@@ -970,6 +972,65 @@
                     "webhookId": "9158bae57e0ca"
                 }
             ]
+        },
+        {
+            "buttonId": "218d2e733d08b6",
+            "name": "blocked showers",
+            "description": "list of block showers",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "blocked showers",
+                    "type": "datastoreitem",
+                    "values": {
+                        "storeId": "issueblockedshower",
+                        "schema": [
+                            {
+                                "id": "9158bae57e0ca_pressed",
+                                "path": "9158bae57e0ca_pressed",
+                                "alias": "reported",
+                                "default": "-"
+                            },
+                            {
+                                "id": "2e9d9d0395fe2e",
+                                "path": "2e9d9d0395fe2e",
+                                "alias": "room",
+                                "default": "-"
+                            },
+                            {
+                                "id": "2f447ea5784396",
+                                "path": "2f447ea5784396",
+                                "alias": "access allowed",
+                                "default": ""
+                            },
+                            {
+                                "id": "237bea4938d46",
+                                "path": "237bea4938d46",
+                                "alias": "access time",
+                                "default": "n/a"
+                            }
+                        ],
+                        "dschema": [],
+                        "filters": [],
+                        "limit": -1,
+                        "orderby": "pressed",
+                        "sortby": "asc",
+                        "description": "list of pending reported blocked showers"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "26632b48188a88",
+                    "number": 1
+                }
+            ],
+            "navigation": {
+                "id": "26632b48188a88",
+                "type": "node",
+                "parent": null,
+                "children": [],
+                "defaults": {}
+            },
+            "webhooks": []
         }
     ]
 }
