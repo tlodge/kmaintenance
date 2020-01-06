@@ -1,5 +1,5 @@
 {
-    "packageId": "b7f696ed29464",
+    "packageId": "2dbdbdd2ebd1ea",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1529,6 +1529,71 @@
                     "webhookId": "ce4b72e29a631"
                 }
             ]
+        },
+        {
+            "buttonId": "29223f1e101f3e",
+            "name": "lightbulbs",
+            "description": "listing of lightbulb replacements",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "Lightbulbs",
+                    "type": "datastoreitem",
+                    "values": {
+                        "storeId": "issuelightbulb",
+                        "schema": [
+                            {
+                                "id": "ce4b72e29a631_pressed",
+                                "path": "ce4b72e29a631_pressed",
+                                "alias": "reported",
+                                "default": ""
+                            },
+                            {
+                                "id": "2cd3cbde3a00b",
+                                "path": "2cd3cbde3a00b",
+                                "alias": "room",
+                                "default": ""
+                            },
+                            {
+                                "id": "9bcdca7c89838",
+                                "path": "9bcdca7c89838",
+                                "alias": "location",
+                                "default": "-"
+                            },
+                            {
+                                "id": "2bfe3561cc30ba",
+                                "path": "2bfe3561cc30ba",
+                                "alias": "access permission",
+                                "default": ""
+                            },
+                            {
+                                "id": "5060d49d16aab8",
+                                "path": "5060d49d16aab8",
+                                "alias": "time",
+                                "default": "n/a"
+                            }
+                        ],
+                        "dschema": [],
+                        "filters": [],
+                        "limit": -1,
+                        "orderby": "pressed",
+                        "sortby": "asc",
+                        "description": "Lightblubs to be replaced"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2a22f20a9e4d9",
+                    "number": 1
+                }
+            ],
+            "navigation": {
+                "id": "2a22f20a9e4d9",
+                "type": "node",
+                "parent": null,
+                "children": [],
+                "defaults": {}
+            },
+            "webhooks": []
         }
     ]
 }
