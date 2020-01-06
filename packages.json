@@ -1,5 +1,5 @@
 {
-    "packageId": "26ff59ec93fe7a",
+    "packageId": "ff8690b787edc8",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -980,7 +980,7 @@
             "type": "action",
             "questions": [
                 {
-                    "question": "blocked showers",
+                    "question": "Blocked showers",
                     "type": "datastoreitem",
                     "values": {
                         "storeId": "issueblockedshower",
@@ -1015,22 +1015,99 @@
                         "limit": -1,
                         "orderby": "pressed",
                         "sortby": "asc",
-                        "description": "list of pending reported blocked showers"
+                        "description": "List of pending reported blocked showers"
                     },
                     "validators": [],
                     "compulsory": true,
                     "questionId": "26632b48188a88",
                     "number": 1
+                },
+                {
+                    "question": "Status",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Has this now been fixed?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2ebdcbaad019e",
+                    "number": 2
+                },
+                {
+                    "question": "More Information",
+                    "type": "freetext",
+                    "values": {
+                        "format": "medium",
+                        "description": "Please provide information on why this has not been fixed (to send to the student)"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1c2168e394296d",
+                    "number": 3
                 }
             ],
             "navigation": {
                 "id": "26632b48188a88",
                 "type": "node",
                 "parent": null,
-                "children": [],
+                "children": [
+                    {
+                        "id": "2ebdcbaad019e",
+                        "type": "node",
+                        "parent": "26632b48188a88",
+                        "children": [
+                            {
+                                "id": "1c2168e394296d",
+                                "type": "node",
+                                "parent": "2ebdcbaad019e",
+                                "children": []
+                            },
+                            {
+                                "id": "256c2d38367eb6",
+                                "type": "node",
+                                "parent": "2ebdcbaad019e",
+                                "children": []
+                            }
+                        ]
+                    }
+                ],
                 "defaults": {}
             },
-            "webhooks": []
+            "webhooks": [
+                {
+                    "name": "Notify fixed",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [],
+                            "placeholders": []
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "256c2d38367eb6"
+                }
+            ]
         }
     ]
 }
