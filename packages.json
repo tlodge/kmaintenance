@@ -1,5 +1,5 @@
 {
-    "packageId": "ff8690b787edc8",
+    "packageId": "160442bad6a4cf",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1040,7 +1040,7 @@
                     "number": 2
                 },
                 {
-                    "question": "More Information",
+                    "question": "More information",
                     "type": "freetext",
                     "values": {
                         "format": "medium",
@@ -1050,6 +1050,23 @@
                     "compulsory": true,
                     "questionId": "1c2168e394296d",
                     "number": 3
+                },
+                {
+                    "question": "Update status",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Should this blocked shower report be removed from the system?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "28bd52a39c6854",
+                    "number": 4
                 }
             ],
             "navigation": {
@@ -1066,13 +1083,34 @@
                                 "id": "1c2168e394296d",
                                 "type": "node",
                                 "parent": "2ebdcbaad019e",
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "28bd52a39c6854",
+                                        "type": "node",
+                                        "parent": "1c2168e394296d",
+                                        "children": [
+                                            {
+                                                "id": "9b0cdb3b87f8e",
+                                                "type": "node",
+                                                "parent": "28bd52a39c6854",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "id": "256c2d38367eb6",
                                 "type": "node",
                                 "parent": "2ebdcbaad019e",
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "155efc7bb29042",
+                                        "type": "node",
+                                        "parent": "256c2d38367eb6",
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -1106,6 +1144,50 @@
                         }
                     },
                     "webhookId": "256c2d38367eb6"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "26632b48188a88"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "26632b48188a88"
+                        }
+                    },
+                    "webhookId": "155efc7bb29042"
+                },
+                {
+                    "name": "notify status update",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [],
+                            "placeholders": []
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "9b0cdb3b87f8e"
                 }
             ]
         }
