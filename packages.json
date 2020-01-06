@@ -1,5 +1,5 @@
 {
-    "packageId": "1dc2aa5abe03c",
+    "packageId": "1c6ad76f2dae29",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1143,8 +1143,8 @@
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "Shower unblocked",
+                                "body": "We are pleased to let you know that our maintenance team have now unblocked your shower.  If you have any further issues please re-report it at our concierge desk."
                             },
                             "sms": {
                                 "body": ""
@@ -1183,12 +1183,19 @@
                     "parameters": {
                         "dynamic": {
                             "recipients": [],
-                            "placeholders": []
+                            "placeholders": [
+                                {
+                                    "id": "1c2168e394296d",
+                                    "qid": "1c2168e394296d",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "Shower status",
+                                "body": "Please note that our maintenance team have taken a look at your shower and have not been able to unblock it.  They report: [1c2168e394296d].  The issue will remain on our system and you will be notified of any updates."
                             },
                             "sms": {
                                 "body": ""
@@ -1210,12 +1217,19 @@
                     "parameters": {
                         "dynamic": {
                             "recipients": [],
-                            "placeholders": []
+                            "placeholders": [
+                                {
+                                    "id": "1c2168e394296d",
+                                    "qid": "1c2168e394296d",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "shower status",
+                                "body": "Please note that the maintenance team have taken a look at your shower and have reported the following: [1c2168e394296d].  This issue has now been marked as completed."
                             },
                             "sms": {
                                 "body": ""
