@@ -1,5 +1,5 @@
 {
-    "packageId": "699207a5a508ec",
+    "packageId": "17599e63627e2a",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1619,7 +1619,7 @@
                     "number": 3
                 },
                 {
-                    "question": "Completed?",
+                    "question": "Remove request?",
                     "type": "options",
                     "values": {
                         "options": [
@@ -1667,13 +1667,37 @@
                                                         "parent": "223e605bec93ec",
                                                         "children": []
                                                     }
+                                                ],
+                                                "rules": [
+                                                    {
+                                                        "type": "question",
+                                                        "id": "b381fd5452cef",
+                                                        "value": {
+                                                            "type": "options",
+                                                            "values": [
+                                                                "yes"
+                                                            ]
+                                                        }
+                                                    }
                                                 ]
                                             },
                                             {
                                                 "id": "262f05b73b354c",
                                                 "type": "node",
                                                 "parent": "b381fd5452cef",
-                                                "children": []
+                                                "children": [],
+                                                "rules": [
+                                                    {
+                                                        "type": "question",
+                                                        "id": "b381fd5452cef",
+                                                        "value": {
+                                                            "type": "options",
+                                                            "values": [
+                                                                "no"
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
