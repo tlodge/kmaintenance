@@ -1,5 +1,5 @@
 {
-    "packageId": "c17b3e872a645",
+    "packageId": "2286511088dd4",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -906,14 +906,36 @@
                                         "rules": []
                                     }
                                 ],
-                                "rules": []
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "2f447ea5784396",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "no"
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
                             {
                                 "id": "9158bae57e0ca",
                                 "type": "node",
                                 "parent": "2f447ea5784396",
                                 "children": [],
-                                "rules": []
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "2f447ea5784396",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "yes"
+                                            ]
+                                        }
+                                    }
+                                ]
                             }
                         ],
                         "rules": []
