@@ -1,5 +1,5 @@
 {
-    "packageId": "2b962714ff616",
+    "packageId": "699207a5a508ec",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1617,6 +1617,23 @@
                     "compulsory": true,
                     "questionId": "2e8175b90304b8",
                     "number": 3
+                },
+                {
+                    "question": "Completed?",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Should this replacement request be removed from the system?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "b381fd5452cef",
+                    "number": 4
                 }
             ],
             "navigation": {
@@ -1633,14 +1650,243 @@
                                 "id": "2e8175b90304b8",
                                 "type": "node",
                                 "parent": "24752ff84cf1f2",
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "b381fd5452cef",
+                                        "type": "node",
+                                        "parent": "2e8175b90304b8",
+                                        "children": [
+                                            {
+                                                "id": "223e605bec93ec",
+                                                "type": "node",
+                                                "parent": "b381fd5452cef",
+                                                "children": [
+                                                    {
+                                                        "id": "164029e8a37765",
+                                                        "type": "node",
+                                                        "parent": "223e605bec93ec",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "262f05b73b354c",
+                                                "type": "node",
+                                                "parent": "b381fd5452cef",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "24752ff84cf1f2",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "no"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "9faba2785979c8",
+                                "type": "node",
+                                "parent": "24752ff84cf1f2",
+                                "children": [
+                                    {
+                                        "id": "44f1fc9a317ea4",
+                                        "type": "node",
+                                        "parent": "9faba2785979c8",
+                                        "children": []
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "24752ff84cf1f2",
+                                        "value": {
+                                            "values": [
+                                                "yes"
+                                            ]
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }
                 ],
                 "defaults": {}
             },
-            "webhooks": []
+            "webhooks": [
+                {
+                    "name": "notify completed",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "2a22f20a9e4d9",
+                                    "type": "question",
+                                    "key": "2cd3cbde3a00b"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "id": "devname",
+                                    "type": "development",
+                                    "key": "name"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Lightbulb replaced",
+                                "body": "The lightbulb in your room as now been replaced.  Many thanks,\n\nKaplan maintenance team."
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "9faba2785979c8"
+                },
+                {
+                    "name": "notify not completed",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "2a22f20a9e4d9",
+                                    "type": "question",
+                                    "key": "2cd3cbde3a00b"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "type": "question",
+                                    "id": "2a22f20a9e4d9:ce4b72e29a631_presser",
+                                    "qid": "2a22f20a9e4d9",
+                                    "key": "ce4b72e29a631_presser"
+                                },
+                                {
+                                    "type": "question",
+                                    "id": "2a22f20a9e4d9:2cd3cbde3a00b",
+                                    "qid": "2a22f20a9e4d9",
+                                    "key": "2cd3cbde3a00b"
+                                },
+                                {
+                                    "id": "2e8175b90304b8",
+                                    "qid": "2e8175b90304b8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Lightbulb replacement",
+                                "body": "Dear [2a22f20a9e4d9:2cd3cbde3a00b],\n\nUnfortunately the lightbulb replacement request has not been fulfilled, the maintenance team report is:\n\n[2e8175b90304b8]\n\nPlease get in contact with us if you have any further issues.\n\nKaplan maintenance team"
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "223e605bec93ec"
+                },
+                {
+                    "name": "notify pending",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "2a22f20a9e4d9",
+                                    "type": "question",
+                                    "key": "2cd3cbde3a00b"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "id": "2e8175b90304b8",
+                                    "qid": "2e8175b90304b8",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Lightbulb replacement pending",
+                                "body": "The maintenance team are still working on your lightbulb replacement, they have taken a look and have reported:\n\n[2e8175b90304b8]\n\nKaplan maintenance team."
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "262f05b73b354c"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "2a22f20a9e4d9"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "2a22f20a9e4d9"
+                        }
+                    },
+                    "webhookId": "164029e8a37765"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "2a22f20a9e4d9"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "2a22f20a9e4d9"
+                        }
+                    },
+                    "webhookId": "44f1fc9a317ea4"
+                }
+            ]
         }
     ]
 }
