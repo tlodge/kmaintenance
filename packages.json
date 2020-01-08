@@ -1,5 +1,5 @@
 {
-    "packageId": "1f77f6bac3508c",
+    "packageId": "1583307e03167",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1435,8 +1435,9 @@
                                                 "type": "question",
                                                 "id": "2bfe3561cc30ba",
                                                 "value": {
+                                                    "type": "options",
                                                     "values": [
-                                                        "yes"
+                                                        "no"
                                                     ]
                                                 }
                                             }
@@ -1462,7 +1463,7 @@
                                                 "value": {
                                                     "type": "options",
                                                     "values": [
-                                                        "no"
+                                                        "yes"
                                                     ]
                                                 }
                                             }
