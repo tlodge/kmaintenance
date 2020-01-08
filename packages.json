@@ -1,5 +1,5 @@
 {
-    "packageId": "8a21bb5530d73",
+    "packageId": "2f63c71586f41a",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -81,7 +81,7 @@
                     "number": 4
                 },
                 {
-                    "question": "access request",
+                    "question": "Access request",
                     "type": "options",
                     "values": {
                         "options": [
@@ -90,7 +90,7 @@
                         ],
                         "multiple": "single",
                         "none": false,
-                        "description": "Are you ok for us to access your apartment when you are not there in order to deal with the issue?"
+                        "description": "Do you give permission for us to access your room when you are not in?"
                     },
                     "validators": [],
                     "compulsory": true,
@@ -848,7 +848,7 @@
                     "number": 1
                 },
                 {
-                    "question": "We will need to access your room to unblock the shower",
+                    "question": "Access request",
                     "type": "options",
                     "values": {
                         "options": [
@@ -857,7 +857,7 @@
                         ],
                         "multiple": "single",
                         "none": false,
-                        "description": "Do you give us permission to access your apartment when you are not in?"
+                        "description": "Do you give permission for us to access your room when you are not in?"
                     },
                     "validators": [],
                     "compulsory": true,
@@ -906,36 +906,14 @@
                                         "rules": []
                                     }
                                 ],
-                                "rules": [
-                                    {
-                                        "type": "question",
-                                        "id": "2f447ea5784396",
-                                        "value": {
-                                            "type": "options",
-                                            "values": [
-                                                "no"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "rules": []
                             },
                             {
                                 "id": "9158bae57e0ca",
                                 "type": "node",
                                 "parent": "2f447ea5784396",
                                 "children": [],
-                                "rules": [
-                                    {
-                                        "type": "question",
-                                        "id": "2f447ea5784396",
-                                        "value": {
-                                            "type": "options",
-                                            "values": [
-                                                "yes"
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "rules": []
                             }
                         ],
                         "rules": []
@@ -1937,7 +1915,7 @@
                         ],
                         "multiple": "single",
                         "none": false,
-                        "description": "Can we gain access to your room when you are not in?"
+                        "description": "Do you give permission for us to access your room when you are not in?"
                     },
                     "validators": [],
                     "compulsory": true,
