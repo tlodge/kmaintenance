@@ -1,5 +1,5 @@
 {
-    "packageId": "17599e63627e2a",
+    "packageId": "8a21bb5530d73",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1909,6 +1909,121 @@
                         }
                     },
                     "webhookId": "44f1fc9a317ea4"
+                }
+            ]
+        },
+        {
+            "buttonId": "28c58af5e5c752",
+            "name": "electrics",
+            "description": "issue with apartment electrics",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "Which room has an electrical fault?",
+                    "type": "rooms",
+                    "values": {},
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "c1c6cf222a9808",
+                    "number": 1
+                },
+                {
+                    "question": "Access permission",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Can we gain access to your room when you are not in?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2aeef61c5b3e3",
+                    "number": 2
+                },
+                {
+                    "question": "When would you like us to come and take a look?",
+                    "type": "datetime",
+                    "values": {
+                        "options": [
+                            "time",
+                            "date"
+                        ],
+                        "description": "Please provide a date/time from tomorrow onwards.",
+                        "dateconstraint": {},
+                        "timeconstraint": {}
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1e4b56acff5804",
+                    "number": 3
+                }
+            ],
+            "navigation": {
+                "id": "c1c6cf222a9808",
+                "type": "node",
+                "parent": null,
+                "children": [
+                    {
+                        "id": "2aeef61c5b3e3",
+                        "type": "node",
+                        "parent": "c1c6cf222a9808",
+                        "children": [
+                            {
+                                "id": "1e4b56acff5804",
+                                "type": "node",
+                                "parent": "2aeef61c5b3e3",
+                                "children": [
+                                    {
+                                        "id": "2dfd332fa9bda",
+                                        "type": "subtree",
+                                        "parent": null,
+                                        "nodeid": "b972b7fbcc9b38",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "b972b7fbcc9b38",
+                                "type": "node",
+                                "parent": "2aeef61c5b3e3",
+                                "children": []
+                            }
+                        ]
+                    }
+                ],
+                "defaults": {}
+            },
+            "webhooks": [
+                {
+                    "name": "log endpoint",
+                    "type": "log",
+                    "url": "https://[buttonkit]/api/v1/datastore/log",
+                    "method": "POST",
+                    "contentType": "json",
+                    "parameters": {
+                        "dynamic": {
+                            "presser": [
+                                {
+                                    "id": "b972b7fbcc9b38_presser",
+                                    "type": "presser"
+                                }
+                            ],
+                            "pressed": [
+                                {
+                                    "id": "b972b7fbcc9b38_pressed",
+                                    "type": "pressed"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "_datastorename": "issueelectrics"
+                        }
+                    },
+                    "webhookId": "b972b7fbcc9b38"
                 }
             ]
         }
