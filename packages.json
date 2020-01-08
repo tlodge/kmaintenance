@@ -1,5 +1,5 @@
 {
-    "packageId": "2dbdbdd2ebd1ea",
+    "packageId": "2b962714ff616",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1426,7 +1426,8 @@
                                                 "type": "subtree",
                                                 "parent": null,
                                                 "nodeid": "17ce5427bbdfd7",
-                                                "children": []
+                                                "children": [],
+                                                "rules": []
                                             }
                                         ],
                                         "rules": [
@@ -1450,7 +1451,8 @@
                                                 "id": "ce4b72e29a631",
                                                 "type": "node",
                                                 "parent": "17ce5427bbdfd7",
-                                                "children": []
+                                                "children": [],
+                                                "rules": []
                                             }
                                         ],
                                         "rules": [
@@ -1466,9 +1468,11 @@
                                             }
                                         ]
                                     }
-                                ]
+                                ],
+                                "rules": []
                             }
-                        ]
+                        ],
+                        "rules": []
                     }
                 ],
                 "defaults": {}
@@ -1584,13 +1588,56 @@
                     "compulsory": true,
                     "questionId": "2a22f20a9e4d9",
                     "number": 1
+                },
+                {
+                    "question": "Status",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Has the lightbulb been successfully replaced?"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "24752ff84cf1f2",
+                    "number": 2
+                },
+                {
+                    "question": "Note to student",
+                    "type": "freetext",
+                    "values": {
+                        "format": "medium",
+                        "description": "Please let the student know why the bulb has not been replaced."
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2e8175b90304b8",
+                    "number": 3
                 }
             ],
             "navigation": {
                 "id": "2a22f20a9e4d9",
                 "type": "node",
                 "parent": null,
-                "children": [],
+                "children": [
+                    {
+                        "id": "24752ff84cf1f2",
+                        "type": "node",
+                        "parent": "2a22f20a9e4d9",
+                        "children": [
+                            {
+                                "id": "2e8175b90304b8",
+                                "type": "node",
+                                "parent": "24752ff84cf1f2",
+                                "children": []
+                            }
+                        ]
+                    }
+                ],
                 "defaults": {}
             },
             "webhooks": []
