@@ -1,5 +1,5 @@
 {
-    "packageId": "2f8a015c068cc8",
+    "packageId": "126af666facf3d",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -2194,7 +2194,7 @@
             "type": "action",
             "questions": [
                 {
-                    "question": "select your apartment",
+                    "question": "Select your apartment",
                     "type": "rooms",
                     "values": {},
                     "validators": [],
@@ -2203,12 +2203,13 @@
                     "number": 1
                 },
                 {
-                    "question": "which lightbulb needs replacing?",
+                    "question": "Which lightbulb needs replacing?",
                     "type": "options",
                     "values": {
                         "options": [
-                            "yes",
-                            "no"
+                            "bedroom",
+                            "kitchen",
+                            "study area"
                         ],
                         "multiple": "single",
                         "none": false,
@@ -2220,7 +2221,7 @@
                     "number": 2
                 },
                 {
-                    "question": "can we have access when you are not in?",
+                    "question": "Access request",
                     "type": "options",
                     "values": {
                         "options": [
@@ -2229,7 +2230,7 @@
                         ],
                         "multiple": "single",
                         "none": false,
-                        "description": ""
+                        "description": "Do you give permission for us to access your room when you are not in?"
                     },
                     "validators": [],
                     "compulsory": true,
@@ -2301,18 +2302,7 @@
                                                 ]
                                             }
                                         ],
-                                        "rules": [
-                                            {
-                                                "type": "question",
-                                                "id": "25ddeb94e03584",
-                                                "value": {
-                                                    "type": "options",
-                                                    "values": [
-                                                        "yes"
-                                                    ]
-                                                }
-                                            }
-                                        ]
+                                        "rules": []
                                     },
                                     {
                                         "id": "2eb140de0dfa68",
@@ -2327,18 +2317,7 @@
                                                 "children": []
                                             }
                                         ],
-                                        "rules": [
-                                            {
-                                                "type": "question",
-                                                "id": "25ddeb94e03584",
-                                                "value": {
-                                                    "type": "options",
-                                                    "values": [
-                                                        "no"
-                                                    ]
-                                                }
-                                            }
-                                        ]
+                                        "rules": []
                                     }
                                 ]
                             }
