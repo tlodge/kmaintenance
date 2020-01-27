@@ -1,5 +1,5 @@
 {
-    "packageId": "2fed2e69baf1ae",
+    "packageId": "16e9c109aa765c",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -2340,13 +2340,25 @@
                     "method": "POST",
                     "parameters": {
                         "dynamic": {
-                            "recipients": [],
-                            "placeholders": []
+                            "recipients": [
+                                {
+                                    "id": "1305ee66345812",
+                                    "type": "question"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "id": "1fea6f14f702ba",
+                                    "qid": "1fea6f14f702ba",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
                         },
                         "static": {
                             "email": {
-                                "subject": "",
-                                "body": ""
+                                "subject": "Your recently reported issue",
+                                "body": "Thank you for reporting your bulb replacement issue.  It has been given issue code: [1fea6f14f702ba].  We will keep you updated on progress.\n\nAll the best,\n\nKaplan maintenance team."
                             },
                             "sms": {
                                 "body": ""
