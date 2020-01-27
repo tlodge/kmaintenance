@@ -1,5 +1,5 @@
 {
-    "packageId": "a7628a7771aff",
+    "packageId": "155866d2d0f19d",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -1231,7 +1231,19 @@
                                                 "id": "2fc5a3c290e674",
                                                 "type": "node",
                                                 "parent": "22d2642f191d88",
-                                                "children": []
+                                                "children": [],
+                                                "rules": [
+                                                    {
+                                                        "type": "question",
+                                                        "id": "22d2642f191d88",
+                                                        "value": {
+                                                            "type": "options",
+                                                            "values": [
+                                                                "no"
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "id": "22b2f6fa25c39a",
@@ -1244,9 +1256,33 @@
                                                         "parent": "22b2f6fa25c39a",
                                                         "children": []
                                                     }
+                                                ],
+                                                "rules": [
+                                                    {
+                                                        "type": "question",
+                                                        "id": "22d2642f191d88",
+                                                        "value": {
+                                                            "type": "options",
+                                                            "values": [
+                                                                "yes"
+                                                            ]
+                                                        }
+                                                    }
                                                 ]
                                             }
                                         ]
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "1fdfcd4509c0c6",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "no"
+                                            ]
+                                        }
                                     }
                                 ]
                             },
@@ -1260,6 +1296,18 @@
                                         "type": "node",
                                         "parent": "1cb19620dd021e",
                                         "children": []
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "question",
+                                        "id": "1fdfcd4509c0c6",
+                                        "value": {
+                                            "type": "options",
+                                            "values": [
+                                                "yes"
+                                            ]
+                                        }
                                     }
                                 ]
                             }
