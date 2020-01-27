@@ -1,5 +1,5 @@
 {
-    "packageId": "1bfddd93003c6e",
+    "packageId": "2fed2e69baf1ae",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -2334,7 +2334,7 @@
             },
             "webhooks": [
                 {
-                    "name": "notify endpoint",
+                    "name": "Notify endpoint",
                     "type": "notify",
                     "url": "https://[buttonkit]/api/v1/send",
                     "method": "POST",
@@ -2361,7 +2361,7 @@
                     "webhookId": "6412daa4ef0db4"
                 },
                 {
-                    "name": "log endpoint",
+                    "name": "Log endpoint",
                     "type": "log",
                     "url": "https://[buttonkit]/api/v1/datastore/log",
                     "method": "POST",
@@ -2370,18 +2370,20 @@
                         "dynamic": {
                             "presser": [
                                 {
-                                    "id": "presser",
+                                    "id": "e6ef99b100d5_presser",
                                     "type": "presser"
                                 }
                             ],
                             "pressed": [
                                 {
-                                    "id": "pressed",
+                                    "id": "e6ef99b100d5_pressed",
                                     "type": "pressed"
                                 }
                             ]
                         },
-                        "static": {}
+                        "static": {
+                            "_datastorename": "issuelightbulbs"
+                        }
                     },
                     "webhookId": "e6ef99b100d5"
                 }
