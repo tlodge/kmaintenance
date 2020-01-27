@@ -1,5 +1,5 @@
 {
-    "packageId": "18f3d438c53031",
+    "packageId": "19bfe8ce61a3c2",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -2139,6 +2139,23 @@
                     "compulsory": true,
                     "questionId": "2fb28a9c02154c",
                     "number": 3
+                },
+                {
+                    "question": "Remove request",
+                    "type": "options",
+                    "values": {
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false,
+                        "description": "Can this issue be deleted from the system"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "22d2642f191d88",
+                    "number": 4
                 }
             ],
             "navigation": {
@@ -2155,13 +2172,47 @@
                                 "id": "2fb28a9c02154c",
                                 "type": "node",
                                 "parent": "1fdfcd4509c0c6",
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "22d2642f191d88",
+                                        "type": "node",
+                                        "parent": "2fb28a9c02154c",
+                                        "children": [
+                                            {
+                                                "id": "2fc5a3c290e674",
+                                                "type": "node",
+                                                "parent": "22d2642f191d88",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "22b2f6fa25c39a",
+                                                "type": "node",
+                                                "parent": "22d2642f191d88",
+                                                "children": [
+                                                    {
+                                                        "id": "1ab6c607f75b29",
+                                                        "type": "node",
+                                                        "parent": "22b2f6fa25c39a",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "id": "1cb19620dd021e",
                                 "type": "node",
                                 "parent": "1fdfcd4509c0c6",
-                                "children": []
+                                "children": [
+                                    {
+                                        "id": "2998a887e79274",
+                                        "type": "node",
+                                        "parent": "1cb19620dd021e",
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2208,6 +2259,132 @@
                         }
                     },
                     "webhookId": "1cb19620dd021e"
+                },
+                {
+                    "name": "notify pending",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "2587dde6159df",
+                                    "type": "question",
+                                    "key": "1305ee66345812"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "type": "question",
+                                    "id": "2587dde6159df:1fea6f14f702ba",
+                                    "qid": "2587dde6159df",
+                                    "key": "1fea6f14f702ba"
+                                },
+                                {
+                                    "id": "2fb28a9c02154c",
+                                    "qid": "2fb28a9c02154c",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Lightbulb issue update",
+                                "body": "Please note that your reported lightbulb issue ([2587dde6159df:1fea6f14f702ba]) has been looked at.  The report is:\n\n[2fb28a9c02154c]\n\nWe will update you on further progress.\n\nBest wishes,\n\nKaplan maintenance team"
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "2fc5a3c290e674"
+                },
+                {
+                    "name": "notify incomplete",
+                    "type": "notify",
+                    "url": "https://[buttonkit]/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "recipients": [
+                                {
+                                    "id": "2587dde6159df",
+                                    "type": "question",
+                                    "key": "1305ee66345812"
+                                }
+                            ],
+                            "placeholders": [
+                                {
+                                    "type": "question",
+                                    "id": "2587dde6159df:1fea6f14f702ba",
+                                    "qid": "2587dde6159df",
+                                    "key": "1fea6f14f702ba"
+                                },
+                                {
+                                    "id": "2fb28a9c02154c",
+                                    "qid": "2fb28a9c02154c",
+                                    "key": "value",
+                                    "type": "question"
+                                }
+                            ]
+                        },
+                        "static": {
+                            "email": {
+                                "subject": "Lightbulb replacement issue",
+                                "body": "Please note that the maintenance team have now marked your lightbulb replacement request ([2587dde6159df:1fea6f14f702ba]) as complete.  They have reported:\n\n[2fb28a9c02154c]\n\nPlease contact the front desk if you have any further issues.  \n\nAll the best,\n\nKaplan maintenance team."
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "message": {
+                                "subject": "",
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "22b2f6fa25c39a"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "2587dde6159df"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "2587dde6159df"
+                        }
+                    },
+                    "webhookId": "1ab6c607f75b29"
+                },
+                {
+                    "name": "delete log item",
+                    "type": "deletelogitem",
+                    "url": "https://[buttonkit]/api/v1/datastore/delete/question",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": {
+                            "ids": [
+                                "2587dde6159df"
+                            ]
+                        },
+                        "static": {
+                            "questionId": "2587dde6159df"
+                        }
+                    },
+                    "webhookId": "2998a887e79274"
                 }
             ]
         }
