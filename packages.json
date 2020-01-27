@@ -1,5 +1,5 @@
 {
-    "packageId": "1ab5df5fa29cb2",
+    "packageId": "cbf05043bbcc4",
     "name": "maintanance",
     "description": "kaplan maintenance button",
     "buttons": [
@@ -888,7 +888,7 @@
                     "values": {
                         "url": "/api/v1/unique",
                         "method": "POST",
-                        "responseType": "html",
+                        "responseType": "text",
                         "description": "This code will be emailed to you."
                     },
                     "validators": [],
@@ -1254,7 +1254,8 @@
                                                         "id": "1ab6c607f75b29",
                                                         "type": "node",
                                                         "parent": "22b2f6fa25c39a",
-                                                        "children": []
+                                                        "children": [],
+                                                        "rules": []
                                                     }
                                                 ],
                                                 "rules": [
@@ -1270,7 +1271,8 @@
                                                     }
                                                 ]
                                             }
-                                        ]
+                                        ],
+                                        "rules": []
                                     }
                                 ],
                                 "rules": [
@@ -1295,7 +1297,8 @@
                                         "id": "2998a887e79274",
                                         "type": "node",
                                         "parent": "1cb19620dd021e",
-                                        "children": []
+                                        "children": [],
+                                        "rules": []
                                     }
                                 ],
                                 "rules": [
@@ -1311,7 +1314,8 @@
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "rules": []
                     }
                 ],
                 "defaults": {}
